@@ -4,8 +4,8 @@ namespace App\Http\Controllers\Friends;
 
 use App\Http\Controllers\Controller;
 use App\Http\Resources\Friend\FriendRequestResource;
-use App\Http\Resources\friend\FriendResource;
-use App\Http\Resources\friend\ReceivedRequestResource;
+use App\Http\Resources\Friend\FriendResource;
+use App\Http\Resources\Friend\ReceivedRequestResource;
 use App\Http\Resources\Friend\SuggestedFriendsResource;
 use App\Repositories\Contracts\IFriend;
 use App\Repositories\Contracts\IFriendRequest;
