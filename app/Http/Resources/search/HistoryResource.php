@@ -5,7 +5,7 @@ namespace App\Http\Resources\search;
 use App\Repositories\Eloquent\UserRepository;
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class historyResource extends JsonResource
+class HistoryResource extends JsonResource
 {
     public function toArray($request): array
     {

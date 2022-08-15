@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Resources\AdminTables\StoriesTableResource;
-use App\Http\Resources\search\historyResource;
+use App\Http\Resources\search\HistoryResource;
 use App\Http\Resources\Story\StoryResource;
 use App\Repositories\Contracts\IPost;
 use App\Repositories\Contracts\IStory;

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\search;
 
 use App\Http\Controllers\Controller;
-use App\Http\Resources\search\historyResource;
+use App\Http\Resources\search\HistoryResource;
 use App\Http\Resources\search\SearchResource;
 use App\Repositories\Contracts\ISearchHistory;
 use App\Repositories\Contracts\IUser;
