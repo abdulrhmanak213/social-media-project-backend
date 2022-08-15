@@ -2,8 +2,8 @@
 
 namespace App\Http\Resources\user;
 
-use App\Http\Resources\friend\FriendRequestResource;
-use App\Http\Resources\friend\FriendResource;
+use App\Http\Resources\Friend\FriendRequestResource;
+use App\Http\Resources\Friend\FriendResource;
 use App\Http\Resources\Post\PostFormatResource;
 use App\Http\Resources\Post\SharedPostsResource;
 use App\Repositories\Eloquent\FriendRepository;

@@ -5,7 +5,6 @@ namespace App\Http\Controllers\user;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Auth\UpdateJobTitles;
 use App\Http\Requests\user\deleteAccountRequest;
-use App\Http\Resources\Cloudinary\CloudinaryResource;
 use App\Http\Resources\user\OtherUserResource;
 use App\Http\Resources\user\UserResource;
 use App\Repositories\Contracts\IUser;
