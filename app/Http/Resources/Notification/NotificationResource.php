@@ -36,6 +36,7 @@ class NotificationResource extends JsonResource
             'created_at'=>$this->created_at,
             'date'=>$this->created_at->diffForHumans(),
             'isSeen'=>$this->isSeen,
+            'user_id'=>$notification->checkType($this->sent_as_type) =='post'?$post->find($this->sent_as_id)->user_id:null,
         ];
     }
 }
