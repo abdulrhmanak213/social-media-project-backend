@@ -52,7 +52,7 @@ class AdminController
     {
         $data =[];
         $data['email'] = $request->input('email');
-        $data['password']= encrypt($request->input('password'));
+        $data['password']= bcrypt($request->input('password'));
         $data['name'] = $request->input('email');
         $this->admin->create($data);
         return self::success('admin created successfully',200);
