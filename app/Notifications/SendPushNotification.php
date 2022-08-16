@@ -43,7 +43,7 @@ class SendPushNotification extends Notification implements ShouldQueue
         return $l->withTitle($this->title)
             ->withBody($this->message)
             ->withIcon('https://res.cloudinary.com/dxntbhjao/image/upload/v1659123908/2/userPicture/creexpbwvp4cs9psrmc5.jpg')
-            ->withClickAction('http://localhost:3000/home')
+            ->withClickAction('https://piedpiperam.herokuapp.com/home')
             ->sendNotification($this->fcmTokens);
     }
 

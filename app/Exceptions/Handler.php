@@ -48,10 +48,10 @@ class Handler extends ExceptionHandler
         $this->renderable(function (AccessDeniedHttpException $e, $request) {
             return self::failure('this action is unauthorized', 403);
         });
-
-        $this->renderable(function (NotFoundHttpException $e, $request) {
-            return self::failure('not found', 404);
-        });
+//
+//        $this->renderable(function (NotFoundHttpException $e, $request) {
+//            return self::failure('not found', 404);
+//        });
         $this->renderable(function (ConnectException $e, $request) {
             return self::failure('check your internet connection', 502);
         });
