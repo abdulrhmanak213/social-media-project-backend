@@ -201,4 +201,4 @@ Route::group(['middleware' => ['auth.guard:user', 'protected']], function() {
 });
 
 
-Route::post('/delete',[UserProfileController::class,'deleteSearch']);
+Route::post('/delete',[SearchUsersController::class,'deleteSearchHistory']);
