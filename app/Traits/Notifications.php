@@ -263,7 +263,7 @@ trait Notifications
             $data['notifiable_type'] = "App\Models\User";
             $data['sent_as_id'] = $complaint->complaintable_type == "App\Models\Comment" ? $post->find($comment->find($complaint->complaintable_id)->post_id)->id : $complaint->complaintable_id;
             $data['sent_as_type'] = $complaint->complaintable_type == "App\Models\Comment" ? "App\Models\Post" : $complaint->complaintable_type;
-            $data['content'] = "System has replied your complaint on " . $user2->name . " post: " . $complaint_reply->text;
+            $data['content'] = "System has replied your complaint on your complaint" . $complaint_reply->text;
             $data['causer_id'] = 0;
             $notifications->create($data);
 
