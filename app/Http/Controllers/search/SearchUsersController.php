@@ -139,10 +139,5 @@ class SearchUsersController extends Controller
     }
 
 
-    public function deleteSearchHistory(){
 
-        SearchHistory::query()->delete();
-        return 'success';
-
-    }
 }
