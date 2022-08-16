@@ -130,6 +130,7 @@
                 }
             }
         },
+
         "/api/signup/{from}": {
             "post": {
                 "tags": [

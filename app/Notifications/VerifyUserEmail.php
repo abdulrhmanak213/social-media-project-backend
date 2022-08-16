@@ -8,9 +8,8 @@ use \Illuminate\Auth\Notifications\VerifyEmail as Notification;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\URL;
 
-class VerifyUserEmail extends Notification implements ShouldQueue
+class VerifyUserEmail extends Notification
 {
-    use Queueable;
 
     protected function verificationUrl($notifiable): array|string
     {

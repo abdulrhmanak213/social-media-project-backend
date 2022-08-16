@@ -7,9 +7,9 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-class SendCode extends Mailable implements ShouldQueue
+class SendCode extends Mailable
 {
-    use Queueable, SerializesModels;
+    use SerializesModels;
 
     public $code, $action;
 
