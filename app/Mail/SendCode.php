@@ -21,6 +21,6 @@ class SendCode extends Mailable
 
     public function build(): SendCode
     {
-        return $this->markdown('mail.send-code');
+        return $this->markdown('Mail.send-code');
     }
 }
