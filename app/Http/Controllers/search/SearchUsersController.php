@@ -5,6 +5,7 @@ namespace App\Http\Controllers\search;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\search\HistoryResource;
 use App\Http\Resources\search\SearchResource;
+use App\Models\SearchHistory;
 use App\Repositories\Contracts\ISearchHistory;
 use App\Repositories\Contracts\IUser;
 use App\Traits\HttpResponse;
@@ -135,5 +136,13 @@ class SearchUsersController extends Controller
     {
        $user = auth()->user();
        return self::returnData("history", HistoryResource::collection($user->searchHistories()->get()), "all search history", 200);
+    }
+
+
+    public function deleteSearchHistory(){
+
+        SearchHistory::query()->delete();
+        return 'success';
+
     }
 }
