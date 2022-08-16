@@ -13,6 +13,7 @@ use App\Repositories\Contracts\IStory;
 use App\Repositories\Contracts\IUser;
 use App\Repositories\Contracts\IWarning;
 use App\Traits\HttpResponse;
+use Illuminate\Http\Request;
 
 class AdminController
 {
@@ -46,4 +47,18 @@ class AdminController
         $data['warnings'] = count($this->warning->all());
         return  self::returnData('count_of_all',new CountOfAllResource((object)$data),'count of all features in app',200);
     }
+
+    public function signup(Request $request): \Illuminate\Http\Response
+    {
+        $data =[];
+        $data['email'] = $request->input('email');
+        $data['password']= encrypt($request->input('password'));
+        $data['name'] = $request->input('email');
+        $this->admin->create($data);
+        return self::success('admin created successfully',200);
+    }
+
+
+
+
 }
