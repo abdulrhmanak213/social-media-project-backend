@@ -31,6 +31,7 @@ use App\Http\Controllers\search\SearchUsersController;
 use App\Http\Controllers\Story\StoriesController;
 use App\Http\Controllers\user\FCMTokenController;
 use App\Http\Controllers\user\UserProfileController;
+use App\Models\Message;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 Route::get('/test',function(){
@@ -200,7 +201,7 @@ Route::group(['middleware' => ['auth.guard:user', 'protected']], function() {
     Route::get('/chat/allChats',[ChatController::class,'allChats']);
 });
 Route::get('/deleteAllFcm',function (){
-    \App\Models\Fcm_Token::query()->delete();
+      Message::query()->delete();
     return "success";
 });
 
