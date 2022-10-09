@@ -201,7 +201,6 @@ Route::group(['middleware' => ['auth.guard:user', 'protected']], function() {
 });
 Route::get('/deleteAllFcm',function (){
     \App\Models\Fcm_Token::query()->delete();
-    \APP\Models\Chat::query()->delete();
     \APP\Models\Message::query()->delete();
     return "success";
 });
