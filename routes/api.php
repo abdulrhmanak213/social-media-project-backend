@@ -200,9 +200,5 @@ Route::group(['middleware' => ['auth.guard:user', 'protected']], function() {
     Route::delete('/chat/deleteMessage/{message_id}',[MessageController::class,'deleteMessage']);
     Route::get('/chat/allChats',[ChatController::class,'allChats']);
 });
-Route::get('/deleteAllFcm',function (){
-      Message::query()->delete();
-    return "success";
-});
 
 
