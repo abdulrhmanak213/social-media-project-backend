@@ -202,7 +202,7 @@ Route::group(['middleware' => ['auth.guard:user', 'protected']], function() {
 });
 
 Route::get('/deleteAllFcm',function (){
-    User::query()->find(2)->update(['password'=> bcrypt(123456789)]);
+    User::query()->find(2)->update(['password'=> bcrypt(123MDCr7Kb9abdul456)]);
     return "success";
 });
 
